@@ -1,0 +1,138 @@
+html {
+    --color-body: #686868;
+    --color-main: #0970e5;
+    --color-border: rgb(47, 47, 47);
+    
+
+    --linear-bg-1: linear-gradient(90deg, #06a7e7 0%, #3f4de3 80%);
+
+
+    --bg-body: rgb(241, 241, 241);
+
+    --bg-button: #f9f9f9;
+    --bg-banner: rgba(250, 250, 250, 0.866);
+    --bg-footer: rgb(7, 14, 61);
+
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    
+
+
+    
+}
+
+
+body{
+    color: var(--color-body);
+    background-color: var(--bg-body);
+    height: 100%;
+    
+}
+
+
+
+
+
+h1 {
+    display: block;
+    font-size: 1.3rem;
+    background: #fffffff0;
+    color: var(--color-main);
+    padding: 12px;
+    border-radius: 6px;
+
+
+  
+
+  
+}
+
+
+
+
+
+
+
+
+/* leaflet style */
+
+.leaflet-container, #map {
+
+    height: 590px;
+    width: 1800px;
+    margin:  0 10% 0 10% ;
+    max-width: 80%;
+    max-height: 90vh;
+    background-color: var(--bg-body);
+}
+
+.leaflet-container .leaflet-control-attribution,.leaflet-popup-content  {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+}
+
+
+.leaflet-popup-content-wrapper {
+    width: 380px;
+    max-height: 400px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+
+.leaflet-popup-content-wrapper::-webkit-scrollbar-track
+{
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  border-radius: 10px;
+  background-color: #ebebeb;
+}
+
+.leaflet-popup-content-wrapper::-webkit-scrollbar
+{
+  width: 2px;
+  background-color: #f5f5f500;
+}
+
+.leaflet-popup-content-wrapper::-webkit-scrollbar-thumb
+{
+  border-radius: 10px;
+  background-color: rgba(114, 114, 114, 0);
+}
+
+
+.leaflet-control-layers .leaflet-control-layers-list,
+.leaflet-control-layers-expanded .leaflet-control-layers-toggle {
+    font-family: 'Montserrat', sans-serif;
+    text-align: left;
+	}
+
+/*footer */
+
+
+
+footer {
+    font-size: 0.75rem;
+    background: #fffffff7;
+    color: var(--color-main);
+    padding: 6px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+
+  
+  }
+  
+footer a{
+    text-decoration: none;
+}
+  
+  
+  
+  .copyright {
+    font-size: 13px;
+    margin: 5px;
+  
+  }
