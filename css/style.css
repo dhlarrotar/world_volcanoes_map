@@ -60,14 +60,15 @@ h1 {
 /* leaflet style */
 
 .leaflet-container, #map {
-
-    height: 590px;
+    height: 500px;
     width: 1800px;
-    margin:  5px 10% 5px 10% ;
-    max-width: 80%;
-    max-height: 90vh;
+    margin:  5px 0 5px 0 ;
+    max-width: 100%;
+    max-height: 80%;
     background-color: var(--bg-body);
 }
+
+
 
 .leaflet-container .leaflet-control-attribution,.leaflet-popup-content  {
     font-family: 'Montserrat', sans-serif;
