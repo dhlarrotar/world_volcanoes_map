@@ -63,7 +63,7 @@ h1 {
 
     height: 590px;
     width: 1800px;
-    margin:  0 10% 0 10% ;
+    margin:  5px 10% 5px 10% ;
     max-width: 80%;
     max-height: 90vh;
     background-color: var(--bg-body);
