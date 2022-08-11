@@ -2,21 +2,18 @@ import csv
 import codecs
 from tqdm import tqdm
 
-# Run this script to transform points from data.csv into JavaScript and write them to points.js
-
-
-count=0
+# Run this script to transform points from volcanoes.csv into Leaflet markers and write them to points.js
 
 
 
 # writing file points.js
-fhand = codecs.open('js/points.js', 'w', "utf-8")
-fhand.write("var addressPoints = [\n")
+fhand = codecs.open('js/points.js', 'w', 'utf-8')
 
 
 
 # opening the CSV file
-with open('volcanoes.csv', mode ='r') as file:
+with open('volcanoes.csv', mode ='r',) as file:
+  print(file)
    
   # reading the CSV file
   csvFile = csv.reader(file)
@@ -28,8 +25,8 @@ with open('volcanoes.csv', mode ='r') as file:
        lon=lines[0]
        lat=lines[1]
 
-       name="'"+lines[2]+"'"
-       country= "'"+lines[3]+"'"
+       name="`"+lines[2]+"`"
+       country= "`"+lines[3]+"`"
 
       # setting up layer names according to "type" attribute
        popup=" `"+lines[4][0:lines[4].find('ñ')]+" `"
@@ -38,16 +35,10 @@ with open('volcanoes.csv', mode ='r') as file:
 
      
       # formatting output of  each point
-       count = count + 1
-       
-       if count > 1 : fhand.write(",\n")
-       output = "["+str(lon)+","+str(lat)+","+str(name)+","+str(country)+","+str(popup)+"]"
-
+       output = "var marker = L.marker(new L.LatLng("+str(lat)+","+str(lon)+")).addTo(parentGroup).bindPopup("+str(popup)+").bindTooltip("+str(name)+",{permanent:true});\n"
 
       # writing output to points.js
        fhand.write(output)
 
 
-fhand.write("\n];\n")
-       
-
+fhand.write("parentGroup.addTo(map);")

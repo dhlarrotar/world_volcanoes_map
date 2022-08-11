@@ -56,16 +56,10 @@ var layerControl = L.control.layers(baseLayers, overlays).addTo(map);
 
   
 
-// adding markersto each layer according to their attribute "type"
-for (var i = 0; i < addressPoints.length; i++) {
-  var a = addressPoints[i];
-  var type = a[2];
-  var marker = L.marker(new L.LatLng(a[1], a[0])).addTo(parentGroup).bindPopup(a[4])
-}
 
 
 map.attributionControl.addAttribution('Smithsonian Institution &copy; <a href="https://volcano.si.edu/">Global Volcanism Program</a>, downloaded 01 Aug 2022');
 
-parentGroup.addTo(map);
+
 
 
