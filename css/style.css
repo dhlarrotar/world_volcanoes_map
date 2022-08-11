@@ -76,8 +76,15 @@ h1 {
 }
 
 
+.leaflet-popup-content p, .leaflet-popup-content img  {
+  width: 280px;
+  height: auto;
+}
+
+
+
+
 .leaflet-popup-content-wrapper {
-    width: 455px;
     max-height: 400px;
     overflow-y: scroll;
     overflow-x: hidden;
