@@ -78,12 +78,10 @@ h1 {
 
 
 
-
-
 /* leaflet style */
 
 .leaflet-container, #map {
-    height: 500px;
+    height: 540px;
     width: 1800px;
     margin:  5px 0 5px 0 ;
     max-width: 100%;
@@ -152,6 +150,7 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
+    text-decoration: none;
 
   
   }
