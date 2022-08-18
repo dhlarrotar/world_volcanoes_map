@@ -25,7 +25,7 @@ var satellite = L.tileLayer(mbUrl, {id: 'mapbox/satellite-v9', tileSize: 512, zo
 
 // creating leaflet map element
 var map = L.map('map', {
-  center: [25.65, 4.1],
+  center: [-9.65, 4.1],
   zoom: 1,
   layers: [streets]
 });
