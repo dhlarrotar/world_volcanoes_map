@@ -11,13 +11,14 @@ var osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 });
 
 // mapbox Streets
-var mbAttr = 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>';
-var mbUrl = 'https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw';
+var esriAttr = 'Tiles &copy; Esri';
+var esriUrl = 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}';
 
-var streets = L.tileLayer(mbUrl, {id: 'mapbox/streets-v11', tileSize: 512, zoomOffset: -1, attribution: mbAttr});
+var streets = L.tileLayer(esriUrl, {id: 'ESRI streets', tileSize: 512, zoomOffset: -1, attribution: esriAttr});
 
 // satellite
-var satellite = L.tileLayer(mbUrl, {id: 'mapbox/satellite-v9', tileSize: 512, zoomOffset: -1, attribution: mbAttr});
+var mbUrl = 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}';
+var satellite = L.tileLayer(mbUrl, {id: 'ESRI satellite', tileSize: 512, zoomOffset: -1, attribution: esriAttr});
 
 
 
@@ -25,7 +26,7 @@ var satellite = L.tileLayer(mbUrl, {id: 'mapbox/satellite-v9', tileSize: 512, zo
 
 // creating leaflet map element
 var map = L.map('map', {
-  center: [-9.65, 4.1],
+  center: [-1.65, 4.1],
   zoom: 1,
   layers: [streets]
 });
